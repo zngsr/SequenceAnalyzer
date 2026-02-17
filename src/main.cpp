@@ -2,13 +2,16 @@
 #include "DNASequence.hpp"
 
 int main(){
-    // Create a DNASequence object / Bir DNASequence nesnesi oluştur
+    // Create a DNASequence object 
     DNASequence myDNA("ATGCGTACGTTAG");
 
-    // Print the length / Uzunluğu ekrana yazdır
-    std::cout << "DNA Sequence: 'ATGCGTACGTTAG'" << std::endl;
-    std::cout << "DNA Sequence Length: " << myDNA.getLength() << std::endl;
-    std::cout << "GC Content: " << myDNA.calculateGCContent() << std::endl;
+    std::cout << "--- Sequence Analyzer Result ---" << std::endl;
+    std::cout << "Original Sequence: ATGCGTACGTTAG" << std::endl;
+    std::cout << "Sequence Length: " << myDNA.getLength() << " bp" << std::endl;
+    std::cout << "GC Content: " << myDNA.calculateGCContent() << " %" << std::endl;
+
+    // Test the newly added Complementary Strand function
+    std::cout << "Complementary Strand: " << myDNA.getComplement() << std::endl;
     
     return 0;
 }

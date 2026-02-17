@@ -1,20 +1,22 @@
-#pragma once // Prevents multiple inclusions / Dosyanın birden fazla kez dahil edilmesini önler
+#pragma once 
 
 #include <string>
 
-// DNA Sequence Class / DNA Dizilimi Sınıfı
+// A class to represent and analyze a single DNA sequence
 class DNASequence {
     private:
-        // Attributes (Variables) / Özellikler (Değişkenler)
         std::string sequence;
 
     public:
-        // Constructor / Yapıcı Metot
-        // Initializes the object / Nesneyi başlatır
+        // Constructor 
         DNASequence(std::string seq);
 
-        // Method to get sequence length / Dizilim uzunluğunu alma metodu
+        // Method to get sequence length
         int getLength();
 
+        // Calculates the GC content percentage
         double calculateGCContent();
+
+        // Generates the complementary DNA strand (A->T, T->A, G->C, C->G)
+        std::string getComplement();
 };
