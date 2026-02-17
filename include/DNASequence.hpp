@@ -15,4 +15,6 @@ class DNASequence {
 
         // Method to get sequence length / Dizilim uzunluğunu alma metodu
         int getLength();
+
+        double calculateGCContent();
 };
