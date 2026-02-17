@@ -1,0 +1,30 @@
+PROJE: DNA SEKANS ANALİZÖRÜ
+DURUM: Başlangıç Aşamasında
+
+FAZ 1: İskeletin Kurulumu ve İlk Sınıf (DNASequence)
+[ ] Klasör yapısını (src, include, data) oluştur.
+[ ] include/DNASequence.h dosyasında DNASequence sınıfının iskeletini tanımla (sadece private değişkenler ve public fonksiyon isimleri).
+[ ] src/DNASequence.cpp dosyasında constructor'ı (yapıcı metodu) yaz ve sekansın uzunluğunu döndüren basit bir fonksiyon ekle.
+[ ] src/main.cpp dosyasında DNASequence sınıfından bir obje yarat ve uzunluğunu konsola yazdırarak projenin hatasız derlendiğini test et.
+
+FAZ 2: Biyolojik Mantığın Koda Dökülmesi (Algoritmalar)
+[ ] DNASequence.cpp içine calculateGCContent() mantığını yaz. (String içinde dön, G ve C'leri say, toplama böl, 100 ile çarp).
+[ ] getComplement() mantığını yaz. (A->T, T->A, G->C, C->G dönüşümü yapan bir döngü).
+[ ] getReverseComplement() mantığını yaz. (Önce complement al, sonra string'i tersine çevir).
+[ ] transcribeToRNA() mantığını yaz. (T'leri U ile değiştir).
+[ ] main.cpp'de örnek bir string ("ATGCGT...") ile tüm bu fonksiyonları çağırıp sonuçların doğruluğunu manuel olarak kontrol et.
+
+FAZ 3: Dosya Yönetimi (FileHandler)
+[ ] data/test_sequence.txt içine rastgele bir DNA dizisi yaz.
+[ ] include/FileHandler.h dosyasında, dosya okuma işlemleri için bir sınıf veya sadece fonksiyonlar tanımla.
+[ ] src/FileHandler.cpp dosyasında, verilen bir dosya yolundan metni okuyup std::string olarak döndüren fonksiyonu yaz.
+[ ] (Opsiyonel/Zorlayıcı) .fasta uzantılı dosyaları okuyacak özel bir fonksiyon yaz (">" ile başlayan satırı ID olarak al, altındaki satırları sekans olarak birleştir).
+
+FAZ 4: Kullanıcı Arayüzü (CLI - Command Line Interface) ve Cila
+[ ] main.cpp'yi düzenle. Program çalıştığında kullanıcıya bir menü sun:
+    1. DNA dizisini klavyeden gir.
+    2. Dosyadan oku (.txt veya .fasta).
+    3. Çıkış.
+[ ] Analiz sonuçlarını konsola temiz ve okunaklı bir rapor formatında yazdır.
+[ ] Kullanıcı geçersiz bir karakter (Örn: "ATXC") girerse programın çökmemesi için basit bir hata kontrolü (validation) ekle.
+[ ] README.md dosyasını yaz (Proje nedir, nasıl derlenir, nasıl çalıştırılır).

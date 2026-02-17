@@ -1,0 +1,19 @@
+# Mac System Files / Mac Sistem Dosyaları
+.DS_Store
+
+# IDE Settings (VS Code) / IDE Ayarları (VS Code)
+.vscode/
+
+# Compiled Binaries & Executables / Derlenmiş ve Çalıştırılabilir Dosyalar
+*.o
+*.exe
+*.app
+*.app/
+*.out
+
+# Build Directories / Derleme Klasörleri
+bin/
+build/
+
+# Personal To-Do List / Kişisel Yapılacaklar Listesi
+.txt
