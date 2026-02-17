@@ -1,5 +1,6 @@
 # Mac System Files / Mac Sistem Dosyaları
 .DS_Store
+._*
 
 # IDE Settings (VS Code) / IDE Ayarları (VS Code)
 .vscode/
@@ -16,4 +17,4 @@ bin/
 build/
 
 # Personal To-Do List / Kişisel Yapılacaklar Listesi
-.txt
+Todo.txt
