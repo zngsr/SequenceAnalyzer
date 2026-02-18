@@ -9,9 +9,11 @@ int main(){
     std::cout << "Original Sequence: ATGCGTACGTTAG" << std::endl;
     std::cout << "Sequence Length: " << myDNA.getLength() << " bp" << std::endl;
     std::cout << "GC Content: " << myDNA.calculateGCContent() << " %" << std::endl;
-
-    // Test the newly added Complementary Strand function
     std::cout << "Complementary Strand: " << myDNA.getComplement() << std::endl;
+
+    // Perform transcriptions based on the strand type
+    std::cout << "RNA (From Template): " << myDNA.transcribeFromTemplate() << std::endl;
+    std::cout << "RNA (Standard): " << myDNA.transcribeToRNA() << std::endl;
     
     return 0;
 }

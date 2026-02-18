@@ -19,4 +19,10 @@ class DNASequence {
 
         // Generates the complementary DNA strand (A->T, T->A, G->C, C->G)
         std::string getComplement();
+
+        // Biological Transcription: Builds mRNA from the template strand (A->U, T->A, G->C, C->G)
+        std::string transcribeFromTemplate();
+
+        // Standard Bioinformatics Transcription: Assumes the coding strand and replaces T with U
+        std::string transcribeToRNA();
 };

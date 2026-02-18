@@ -40,3 +40,39 @@ std::string DNASequence::getComplement(){
     }
     return complement;
 }
+
+// Biological Transcription: Transcribes the DNA sequence to mRNA using the template strand
+std::string DNASequence::transcribeFromTemplate(){
+    std::string mRNA = "";
+
+    for(int i = 0; i < sequence.length(); i++){
+        if(sequence[i] == 'A'){
+            mRNA += 'U';
+        }
+        else if(sequence[i] == 'T'){
+            mRNA += 'A';
+        }
+        else if(sequence[i] == 'G'){
+            mRNA += 'C';
+        }
+        else if(sequence[i] == 'C'){
+            mRNA += 'G';
+        }
+    }
+    return mRNA;
+}
+
+// Standard Transcription: Converts the coding strand directly to mRNA (Replaces T with U)
+std::string DNASequence::transcribeToRNA(){
+    std::string mRNA = "";
+
+    for(int i = 0; i < sequence.length(); i++){
+        if(sequence[i] == 'T'){
+            mRNA += 'U';
+        }
+        else{
+            mRNA += sequence[i];
+        }
+    }
+    return mRNA;
+}
