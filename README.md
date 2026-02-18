@@ -1,27 +1,38 @@
-# DNA Sequence Analyzer 🧬
+# Sequence Analyzer 🧬💻
 
-🌍 **[English]** A modern C++20 console application designed for basic bioinformatics analysis. This tool allows users to process and analyze DNA sequences efficiently. 
+*(Scroll down for Turkish 🇹🇷)*
 
-**Features:**
-* Calculates GC Content
-* Generates Complement and Reverse Complement sequences
-* Transcribes DNA to RNA
+🇬🇧 **English**
+
+A console-based (CLI) bioinformatics engine built with **C++** and **Object-Oriented Programming (OOP)**, designed to bridge the gap between biology and software development. This project takes raw DNA sequences and performs essential biological transformations and analyses.
+
+### 🛠️ Features (v1.0.0)
+* **Basic Analysis:** Calculates total sequence length and GC (Guanine-Cytosine) content percentage.
+* **Strand Generation:** Generates Complementary and Reverse Complementary sequences.
+* **Dual-Engine Transcription:** * *Biological Transcription:* Synthesizes mRNA from the template strand (A->U, T->A, G->C, C->G).
+  * *Standard Bioinformatics Transcription:* Direct T -> U conversion from the coding strand.
+
+### 🚀 Roadmap (Upcoming Features)
+- [ ] Interactive terminal menu for real-time sequence input via `std::cin`.
+- [ ] File parsing modules to read sequences directly from `.fasta` and `.txt` files.
+- [ ] Advanced sequence validation to ensure only valid nucleotides (A, T, G, C) are processed.
 
 ---
 
-🇹🇷 **[Türkçe]** Temel biyoinformatik analizleri için tasarlanmış, modern C++20 ile yazılmış bir konsol uygulaması. Bu araç, kullanıcıların DNA dizilimlerini verimli bir şekilde işlemesine ve analiz etmesine olanak tanır.
+🇹🇷 **Türkçe**
 
-**Özellikler:**
-* GC İçeriği hesaplama
-* Tamamlayıcı (Complement) ve Ters-Tamamlayıcı (Reverse Complement) dizilim oluşturma
-* DNA'dan RNA'ya transkripsiyon
+Biyoloji bilimini ve yazılım dünyasını birleştirme hedefiyle geliştirilen, **C++** ve **Nesne Yönelimli Programlama (OOP)** mimarisi üzerine kurulu bir biyoinformatik konsol (CLI) uygulamasıdır. Bu proje, ham DNA dizilerini alarak temel biyolojik dönüşümleri ve analizleri gerçekleştirir.
+
+### 🛠️ Özellikler (v1.0.0)
+* **Temel Analiz:** DNA dizilerinin toplam uzunluğunu ve GC (Guanin-Sitozin) içeriğini yüzdelik olarak hesaplar.
+* **İplik Üretimi:** Verilen sekansın Tamamlayıcı (Complement) ve Ters-Tamamlayıcı (Reverse Complement) dizilimlerini oluşturur.
+* **Çift Motorlu Transkripsiyon:** * *Biyolojik Transkripsiyon:* Kalıp iplikten (Template Strand) eşleşme yoluyla mRNA sentezler.
+  * *Standart Biyoinformatik Transkripsiyon:* Anlamlı iplikten (Coding Strand) doğrudan T -> U dönüşümü yapar.
+
+### 🚀 Yol Haritası (Gelecek Planları)
+- [ ] Kullanıcıdan anlık sekans girdisi alabilen interaktif terminal menüsü.
+- [ ] Gerçek genom verilerini işlemek için `.fasta` ve `.txt` formatında dosya okuma modülleri.
+- [ ] Sadece geçerli nükleotidlerin (A, T, G, C) girildiğini denetleyen validasyon sistemi.
 
 ---
-
-### 🚀 Build & Run / Derleme ve Çalıştırma (CMake)
-```bash
-mkdir build
-cd build
-cmake ..
-make
-./SequenceAnalyzer
+*Developed with 🧬 and 💻 by [Zeng Sarı](https://zengsari.com)*
