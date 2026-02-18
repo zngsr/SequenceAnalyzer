@@ -16,6 +16,7 @@ A console-based (CLI) bioinformatics engine built with **C++** and **Object-Orie
 - [ ] Interactive terminal menu for real-time sequence input via `std::cin`.
 - [ ] File parsing modules to read sequences directly from `.fasta` and `.txt` files.
 - [ ] Advanced sequence validation to ensure only valid nucleotides (A, T, G, C) are processed.
+- [ ] **Long-Term Goal:** Transform the engine into a full-fledged Graphical User Interface (GUI) desktop application using **wxWidgets**.
 
 ---
 
@@ -33,6 +34,7 @@ Biyoloji bilimini ve yazılım dünyasını birleştirme hedefiyle geliştirilen
 - [ ] Kullanıcıdan anlık sekans girdisi alabilen interaktif terminal menüsü.
 - [ ] Gerçek genom verilerini işlemek için `.fasta` ve `.txt` formatında dosya okuma modülleri.
 - [ ] Sadece geçerli nükleotidlerin (A, T, G, C) girildiğini denetleyen validasyon sistemi.
+- [ ] **Uzun Vadeli Hedef:** **wxWidgets** kütüphanesini kullanarak motoru modern bir Grafik Kullanıcı Arayüzüne (GUI) sahip bir masaüstü uygulamasına dönüştürmek.
 
 ---
 *Biologist by Degree, Developer by Design.*
