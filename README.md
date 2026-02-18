@@ -18,6 +18,28 @@ A console-based (CLI) bioinformatics engine built with **C++** and **Object-Orie
 - [ ] Advanced sequence validation to ensure only valid nucleotides (A, T, G, C) are processed.
 - [ ] **Long-Term Goal:** Transform the engine into a full-fledged Graphical User Interface (GUI) desktop application using **wxWidgets**.
 
+### ⚙️ How to Build and Run
+
+**Method 1: Using CMake (Recommended)**
+This project uses CMake as its primary build system.
+```bash
+git clone https://github.com/zngsr/SequenceAnalyzer.git
+cd SequenceAnalyzer
+mkdir build && cd build
+cmake ..
+make
+./SequenceAnalyzer
+```
+
+**Method 2: Quick Compile (Using g++)**
+If you don't have CMake installed, you can compile the source files directly (C++20 or higher required).
+```bash
+git clone https://github.com/zngsr/SequenceAnalyzer.git
+cd SequenceAnalyzer
+g++ -std=c++20 main.cpp DNASequence.cpp -o SequenceAnalyzer
+./SequenceAnalyzer
+```
+
 ---
 
 🇹🇷 **Türkçe**
@@ -35,6 +57,28 @@ Biyoloji bilimini ve yazılım dünyasını birleştirme hedefiyle geliştirilen
 - [ ] Gerçek genom verilerini işlemek için `.fasta` ve `.txt` formatında dosya okuma modülleri.
 - [ ] Sadece geçerli nükleotidlerin (A, T, G, C) girildiğini denetleyen validasyon sistemi.
 - [ ] **Uzun Vadeli Hedef:** **wxWidgets** kütüphanesini kullanarak motoru modern bir Grafik Kullanıcı Arayüzüne (GUI) sahip bir masaüstü uygulamasına dönüştürmek.
+
+### ⚙️ Kurulum ve Çalıştırma
+
+**Yöntem 1: CMake ile (Önerilen)**
+Bu proje ana derleme sistemi olarak CMake kullanmaktadır ve kesinlikle **C++20 veya üzeri** bir standart gerektirir (alt sürümler desteklenmemektedir).
+```bash
+git clone https://github.com/zngsr/SequenceAnalyzer.git
+cd SequenceAnalyzer
+mkdir build && cd build
+cmake ..
+make
+./SequenceAnalyzer
+```
+
+**Yöntem 2: Hızlı Derleme (g++ ile)**
+Eğer sisteminizde CMake kurulu değilse, kaynak dosyalarını doğrudan derleyebilirsiniz (C++20 veya üzeri gereklidir).
+```bash
+git clone https://github.com/zngsr/SequenceAnalyzer.git
+cd SequenceAnalyzer
+g++ -std=c++20 main.cpp DNASequence.cpp -o SequenceAnalyzer
+./SequenceAnalyzer
+```
 
 ---
 *Biologist by Degree, Developer by Design.*
