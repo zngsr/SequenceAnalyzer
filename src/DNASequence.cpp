@@ -1,4 +1,5 @@
-#include "DNASequence.hpp" 
+#include "DNASequence.hpp"
+#include <algorithm> 
 
 // Constructor 
 DNASequence::DNASequence(std::string seq){
@@ -76,4 +77,13 @@ std::string DNASequence::transcribeToRNA(){
         }
     }
     return mRNA;
+}
+
+// Generates the reverse complement by first getting the complement and then reversing the string
+std::string DNASequence::reverseComplement(){
+    std::string revComplement = "";
+
+    revComplement = getComplement();
+    std::reverse(std::begin(revComplement), std::end(revComplement));
+    return revComplement;
 }

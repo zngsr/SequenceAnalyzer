@@ -26,4 +26,7 @@ class DNASequence {
 
         // Standard Bioinformatics Transcription: Assumes the coding strand and replaces T with U
         std::string transcribeToRNA();
+
+        // Generates the reverse complement of the DNA sequence (5'->3' to 3'->5')
+        std::string reverseComplement();
 };
