@@ -3,28 +3,29 @@
 // Constructor 
 DNASequence::DNASequence(std::string seq){
     sequence = seq;
+    len = sequence.length();
 }
 
 // Returns the total number of nucleotides
 int DNASequence::getLength(){
-    return sequence.length();
+    return len;
 }
 
 // Calculates the percentage of Guanine and Cytosine in the sequence
 double DNASequence::calculateGCContent(){
     double GC = 0;
-    for(int i = 0; i < sequence.length(); i++){
+    for(int i = 0; i < len; i++){
         if(sequence[i] == 'G' || sequence[i] == 'C'){
             GC++;
         }
     }
-    return (GC / double(sequence.length())) * 100;
+    return (GC / double(len)) * 100;
 }
 
 // Generates the complementary DNA strand (A->T, T->A, G->C, C->G)
 std::string DNASequence::getComplement(){
     std::string complement = "";
-    for(int i = 0; i < sequence.length(); i++){
+    for(int i = 0; i < len; i++){
         if(sequence[i] == 'A'){
             complement += 'T';
         }
@@ -45,7 +46,7 @@ std::string DNASequence::getComplement(){
 std::string DNASequence::transcribeFromTemplate(){
     std::string mRNA = "";
 
-    for(int i = 0; i < sequence.length(); i++){
+    for(int i = 0; i < len; i++){
         if(sequence[i] == 'A'){
             mRNA += 'U';
         }
@@ -66,7 +67,7 @@ std::string DNASequence::transcribeFromTemplate(){
 std::string DNASequence::transcribeToRNA(){
     std::string mRNA = "";
 
-    for(int i = 0; i < sequence.length(); i++){
+    for(int i = 0; i < len; i++){
         if(sequence[i] == 'T'){
             mRNA += 'U';
         }

@@ -6,6 +6,7 @@
 class DNASequence {
     private:
         std::string sequence;
+        int len;
 
     public:
         // Constructor 
