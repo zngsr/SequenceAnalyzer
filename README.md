@@ -35,4 +35,5 @@ Biyoloji bilimini ve yazılım dünyasını birleştirme hedefiyle geliştirilen
 - [ ] Sadece geçerli nükleotidlerin (A, T, G, C) girildiğini denetleyen validasyon sistemi.
 
 ---
-*Developed with 🧬 and 💻 by [Zeng Sarı](https://zengsari.com)*
+*Biologist by Degree, Developer by Design.*
+**[Zeng Sarı](https://www.zengsari.com)**
