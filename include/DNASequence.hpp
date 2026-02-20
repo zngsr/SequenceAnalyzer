@@ -8,10 +8,14 @@ class DNASequence {
         std::string sequence;
         int len;
 
+        // Checks if the sequence contains only valid standard nucleotides (A, T, G, C).
+        bool isValid();
+
     public:
         // Constructor 
         DNASequence(std::string seq);
 
+        // Returns the original sequence automatically converted to uppercase.
         std::string orgSeq();
 
         // Method to get sequence length

@@ -1,15 +1,31 @@
 #include "DNASequence.hpp"
 #include <algorithm> 
 #include <cctype>
+#include <stdexcept>
 
 // Constructor 
 DNASequence::DNASequence(std::string seq){
     std::transform(seq.begin(), seq.end(), seq.begin(), ::toupper);
     sequence = seq;
+
+    if(isValid() == false){
+        throw std::invalid_argument("Invalid nucleotide detected! Only A, T, G, C are allowed.");
+    }
+
     len = sequence.length();
 }
 
-// Return the original toupper sequence
+// Validates the sequence using early return for maximum performance.
+bool DNASequence::isValid(){
+    for(char n : this ->sequence){
+        if(n != 'A' && n != 'T' && n != 'G' && n != 'C'){
+            return false;
+        }
+    }
+    return true;
+}
+
+// Returns the formatted sequence for display purposes.
 std::string DNASequence::orgSeq(){
     return sequence;
 }

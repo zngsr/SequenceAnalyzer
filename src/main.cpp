@@ -86,6 +86,11 @@ int main(){
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << "Press Enter to try again...";
             std::cin.get();
+        }catch(const std::invalid_argument& e){
+            std::cerr << "\n[ERROR]: " << e.what() << std::endl;
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Press Enter to try again...";
+            std::cin.get();
         }catch(...){
             std::cerr << "\nAn unknown error occurred!" << std::endl;
         }
