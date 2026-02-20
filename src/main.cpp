@@ -49,7 +49,7 @@ int main(){
                     std::cout << "╚═══════════════════════════════════════════╝" << std::endl;
 
                     std::cout << "  🧬 Sequence Information:" << std::endl;
-                    std::cout << "  ├─ Original  : " << userInput << std::endl;
+                    std::cout << "  ├─ Original  : " << myDNA.orgSeq() << std::endl;
                     std::cout << "  ├─ Length    : " << myDNA.getLength() << " bp" << std::endl;
                     std::cout << "  └─ GC Content: %" << myDNA.calculateGCContent() << std::endl;
 

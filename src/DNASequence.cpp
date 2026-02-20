@@ -1,10 +1,17 @@
 #include "DNASequence.hpp"
 #include <algorithm> 
+#include <cctype>
 
 // Constructor 
 DNASequence::DNASequence(std::string seq){
+    std::transform(seq.begin(), seq.end(), seq.begin(), ::toupper);
     sequence = seq;
     len = sequence.length();
+}
+
+// Return the original toupper sequence
+std::string DNASequence::orgSeq(){
+    return sequence;
 }
 
 // Returns the total number of nucleotides

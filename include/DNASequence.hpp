@@ -12,6 +12,8 @@ class DNASequence {
         // Constructor 
         DNASequence(std::string seq);
 
+        std::string orgSeq();
+
         // Method to get sequence length
         int getLength();
 
