@@ -8,7 +8,7 @@ A powerful, console-based (CLI) bioinformatics engine built with **C++** and **O
 
 ### 📊 Project Status: Stable / Maintenance
 
-> The core functionality of the Sequence Analyzer is now **complete**. The project has reached its v2.0.0 milestone and is currently in maintenance mode. Active feature development is paused, but the repository will be actively maintained for bug fixes and stability improvements.
+ The core functionality of the Sequence Analyzer is now **complete**. The project has reached its v2.0.0 milestone and is currently in maintenance mode. Active feature development is paused, but the repository will be actively maintained for bug fixes and stability improvements.
 
 ### 🛠️ Features (v2.0.0)
 
