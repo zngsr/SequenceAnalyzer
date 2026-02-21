@@ -3,7 +3,7 @@
 #include <cctype>
 #include <stdexcept>
 
-// Constructor 
+// Initializes the sequence, converts to uppercase, and validates it
 DNASequence::DNASequence(std::string seq){
     std::transform(seq.begin(), seq.end(), seq.begin(), ::toupper);
     sequence = std::move(seq);
@@ -44,6 +44,16 @@ double DNASequence::calculateGCContent() const{
         }
     }
     return (GC / double(len)) * 100;
+}
+
+// Counts and assigns the total number of A, T, G, and C nucleotides
+void DNASequence::getNucleotideCounts(int& a, int& t, int& g, int& c){
+    for(char n : this -> sequence){
+        if(n == 'A') a++;
+        else if(n == 'T') t++;
+        else if(n == 'G') g++;
+        else if(n == 'C') c++;
+    }
 }
 
 // Generates the complementary DNA strand (A->T, T->A, G->C, C->G)

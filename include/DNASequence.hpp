@@ -12,7 +12,7 @@ class DNASequence {
         bool isValid() const;
 
     public:
-        // Constructor 
+        // Initializes the sequence, converts to uppercase, and validates it
         DNASequence(std::string seq);
 
         // Returns the original sequence automatically converted to uppercase.
@@ -23,6 +23,9 @@ class DNASequence {
 
         // Calculates the GC content percentage
         double calculateGCContent() const;
+
+        // Counts and assigns the total number of A, T, G, and C nucleotides
+        void getNucleotideCounts(int& a, int& t, int& g, int& c);
 
         // Generates the complementary DNA strand (A->T, T->A, G->C, C->G)
         std::string getComplement() const;
