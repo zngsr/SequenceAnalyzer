@@ -6,7 +6,7 @@
 // Constructor 
 DNASequence::DNASequence(std::string seq){
     std::transform(seq.begin(), seq.end(), seq.begin(), ::toupper);
-    sequence = seq;
+    sequence = std::move(seq);
 
     if(isValid() == false){
         throw std::invalid_argument("Invalid nucleotide detected! Only A, T, G, C are allowed.");
@@ -16,7 +16,7 @@ DNASequence::DNASequence(std::string seq){
 }
 
 // Validates the sequence using early return for maximum performance.
-bool DNASequence::isValid(){
+bool DNASequence::isValid() const{
     for(char n : this ->sequence){
         if(n != 'A' && n != 'T' && n != 'G' && n != 'C'){
             return false;
@@ -26,17 +26,17 @@ bool DNASequence::isValid(){
 }
 
 // Returns the formatted sequence for display purposes.
-std::string DNASequence::orgSeq(){
+std::string DNASequence::orgSeq() const{
     return sequence;
 }
 
 // Returns the total number of nucleotides
-int DNASequence::getLength(){
+int DNASequence::getLength() const{
     return len;
 }
 
 // Calculates the percentage of Guanine and Cytosine in the sequence
-double DNASequence::calculateGCContent(){
+double DNASequence::calculateGCContent() const{
     double GC = 0;
     for(int i = 0; i < len; i++){
         if(sequence[i] == 'G' || sequence[i] == 'C'){
@@ -47,8 +47,9 @@ double DNASequence::calculateGCContent(){
 }
 
 // Generates the complementary DNA strand (A->T, T->A, G->C, C->G)
-std::string DNASequence::getComplement(){
+std::string DNASequence::getComplement() const{
     std::string complement = "";
+    complement.reserve(len);
     for(int i = 0; i < len; i++){
         if(sequence[i] == 'A'){
             complement += 'T';
@@ -67,8 +68,9 @@ std::string DNASequence::getComplement(){
 }
 
 // Biological Transcription: Transcribes the DNA sequence to mRNA using the template strand
-std::string DNASequence::transcribeFromTemplate(){
+std::string DNASequence::transcribeFromTemplate() const{
     std::string mRNA = "";
+    mRNA.reserve(len);
 
     for(int i = 0; i < len; i++){
         if(sequence[i] == 'A'){
@@ -88,8 +90,9 @@ std::string DNASequence::transcribeFromTemplate(){
 }
 
 // Standard Transcription: Converts the coding strand directly to mRNA (Replaces T with U)
-std::string DNASequence::transcribeToRNA(){
+std::string DNASequence::transcribeToRNA() const{
     std::string mRNA = "";
+    mRNA.reserve(len);
 
     for(int i = 0; i < len; i++){
         if(sequence[i] == 'T'){
@@ -103,10 +106,9 @@ std::string DNASequence::transcribeToRNA(){
 }
 
 // Generates the reverse complement by first getting the complement and then reversing the string
-std::string DNASequence::reverseComplement(){
-    std::string revComplement = "";
+std::string DNASequence::reverseComplement() const{
+    std::string revComplement = getComplement();
 
-    revComplement = getComplement();
     std::reverse(std::begin(revComplement), std::end(revComplement));
     return revComplement;
 }

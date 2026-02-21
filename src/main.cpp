@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits>
 #include "DNASequence.hpp"
 
 void clearScreen(){
@@ -38,7 +39,8 @@ int main(){
                     clearScreen();
                     std::cout << "🧬 DNA Analysis Mode Active\n────────────────────────\n";
                     std::cout << "Enter DNA sequence to analyze: ";
-                    std::cin >> userInput;
+                    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                    std::getline(std::cin, userInput);
 
                     {
 
